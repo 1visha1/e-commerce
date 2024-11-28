@@ -4,7 +4,7 @@ services:
   web:
     build:
       context: .  # The current directory
-      dockerfile: Dockerfile  # Ensure this matches the exact filename of your Dockerfile
+      dockerfile: dockerfile  # Ensure this matches the exact filename of your Dockerfile
     ports:
       - "80:80"  # Map container port 80 to host port 80
     volumes:
