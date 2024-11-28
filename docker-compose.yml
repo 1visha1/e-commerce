@@ -4,7 +4,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile  # Specify the Dockerfile if it's named differently
+      dockerfile: dockerfile  # Specify the Dockerfile if it's named differently
     ports:
       - "80:80"  # Expose port 80 of the container to port 80 on the host
     volumes:
