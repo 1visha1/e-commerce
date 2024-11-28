@@ -3,10 +3,10 @@ version: '3.8'
 services:
   web:
     build:
-      context: .
-      dockerfile: dockerfile  # Specify the Dockerfile if it's named differently
+      context: .  # The current directory
+      dockerfile: Dockerfile  # Ensure this matches the exact filename of your Dockerfile
     ports:
-      - "80:80"  # Expose port 80 of the container to port 80 on the host
+      - "80:80"  # Map container port 80 to host port 80
     volumes:
-      - .:/usr/share/nginx/html  # Mount current directory to the Nginx web server directory
-    restart: always  # Optional: Restart the container if it fails
+      - .:/usr/share/nginx/html  # Mount current directory to the Nginx container directory
+    restart: always  # Optionally restart the container if it fails
